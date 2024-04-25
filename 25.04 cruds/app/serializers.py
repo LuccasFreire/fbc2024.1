@@ -16,7 +16,7 @@ class OrcamentoSerializer(serializers.ModelSerializer):
         model = Orcamento
         fields = '__all__'
 
-class OrcamentoSerializer(serializers.ModelSerializer):
+class SessaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sessao
         fields = '__all__'

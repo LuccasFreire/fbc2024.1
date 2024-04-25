@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.pagination import LimitOffsetPagination
 from .models import Produtos, Categorias, Sessao, Orcamento
-from .serializers import ProdutosSerializer, CategoriasSerializer
+from .serializers import ProdutosSerializer, CategoriasSerializer, OrcamentoSerializer, SessaoSerializer
 from app import models
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -26,10 +26,10 @@ class CategoriasViewSet(viewsets.ModelViewSet):
 
 class OrcamentoViewSet(viewsets.ModelViewSet):
     queryset = Orcamento.objects.all()
-    serializer_class = CategoriasSerializer
+    serializer_class = OrcamentoSerializer
     pagination_class = LimitOffsetPagination
 
 class SessaoViewSet(viewsets.ModelViewSet):
     queryset = Sessao.objects.all()
-    serializer_class = CategoriasSerializer
+    serializer_class = SessaoSerializer
     pagination_class = LimitOffsetPagination
