@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Produtos, Categorias
+from .models import Produtos, Categorias, Orcamento, Sessao
 # username: admin 
 # password: admin
 
@@ -12,3 +12,6 @@ class CategoriasAdmin(admin.ModelAdmin):
     list_display = ('categoria', 'descricao')
 
 admin.site.register(Categorias, CategoriasAdmin)
+admin.site.register(Orcamento)
+admin.site.register(Sessao)
+
